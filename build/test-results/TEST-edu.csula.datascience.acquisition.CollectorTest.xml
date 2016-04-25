@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.csula.datascience.acquisition.CollectorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-04-25T02:53:47" hostname="Lenovo-PC" time="0.108">
+  <properties/>
+  <testcase name="mungee" classname="edu.csula.datascience.acquisition.CollectorTest" time="0.108"/>
+  <system-out><![CDATA[listedu.csula.datascience.acquisition.SimpleModel@59d68803
+listedu.csula.datascience.acquisition.SimpleModel@50bfc6d4
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
