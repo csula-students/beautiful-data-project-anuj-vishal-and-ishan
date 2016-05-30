@@ -1,11 +1,12 @@
 package edu.csula.datascience.acquisition;
 
 import static org.elasticsearch.node.NodeBuilder.nodeBuilder;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.elasticsearch.action.bulk.BackoffPolicy;
@@ -22,6 +23,8 @@ import org.elasticsearch.node.Node;
 
 import com.google.gson.Gson;
 
+
+
 public class ElasticSearchExampleApp {
 	private final static String indexName = "bd-data25";
 	private final static String typeName = "test25";
@@ -37,6 +40,7 @@ public class ElasticSearchExampleApp {
 			public void beforeBulk(long executionId, BulkRequest request) {
 			}
 
+			
 			@Override
 			public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {
 			}
