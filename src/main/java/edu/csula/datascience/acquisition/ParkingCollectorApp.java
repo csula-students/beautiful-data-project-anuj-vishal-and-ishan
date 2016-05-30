@@ -16,20 +16,15 @@ public class ParkingCollectorApp {
 		String[] resourse = {
 				"\\src\\main\\resources\\org\\gradle\\Parking_Violations_Issued_-_Fiscal_Year_2014__August_2013___June_2014_(1).csv",
 				"\\src\\main\\resources\\org\\gradle\\Parking_Violations_Issued_-_Fiscal_Year_2016.csv",
-				"\\src\\main\\resources\\org\\gradle\\Parking_Violations_Issued_-_Fiscal_Year_2015.csv",
-				"\\src\\main\\resources\\org\\gradle\\parkinggeocoded.csv" };
-
+				"\\src\\main\\resources\\org\\gradle\\Parking_Violations_Issued_-_Fiscal_Year_2015.csv" };
 		/*
-		 * String[] URL = {
+		 * String[] resourse = {
 		 * "C:/Users/Ishan/Downloads/Parking_Violations_Issued_-_Fiscal_Year_2014__August_2013___June_2014_(1).csv",
 		 * "C:/Users/Ishan/Downloads/Parking_Violations_Issued_-_Fiscal_Year_2016.csv",
-		 * "C:/Users/Ishan/Downloads/Parking_Violations_Issued_-_Fiscal_Year_2015.csv",
-		 * "C:/Users/Ishan/Downloads/parkinggeocoded.csv"
-		 * 
+		 * "C:/Users/Ishan/Downloads/Parking_Violations_Issued_-_Fiscal_Year_2015.csv"
 		 * };
-		 */
-
-		String[] URL = new String[4];
+		 * 
+		 */ String[] URL = new String[4];
 		for (int i = 0; i < resourse.length; i++) {
 			URL[i] = getPath(resourse[i]);
 			System.out.println(URL[i]);
@@ -73,7 +68,7 @@ public class ParkingCollectorApp {
 		current += path;
 		System.out.println("Current dir:" + current);
 		return current;
-//Test
+		// Test
 	}
 
 }
