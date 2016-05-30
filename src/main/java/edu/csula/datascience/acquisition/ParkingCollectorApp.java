@@ -73,7 +73,7 @@ public class ParkingCollectorApp {
 		current += path;
 		System.out.println("Current dir:" + current);
 		return current;
-
+//Test
 	}
 
 }
