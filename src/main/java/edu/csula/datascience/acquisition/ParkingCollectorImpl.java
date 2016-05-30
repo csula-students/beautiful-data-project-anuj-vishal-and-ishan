@@ -47,8 +47,8 @@ public class ParkingCollectorImpl implements Collector<List, List> {
 		 */
 
 		mongoClient = new MongoClient("localhost", 27017);
-		database = mongoClient.getDB("parking");
-		collection = database.getCollection("parkingViolation");
+		database = mongoClient.getDB("parkingtest5");
+		collection = database.getCollection("parkingViolationtest5");
 	}
 
 	public Collection<List> mungee(@SuppressWarnings("rawtypes") Collection<List> src) {
@@ -95,8 +95,11 @@ public class ParkingCollectorImpl implements Collector<List, List> {
 					subList.add(viol[1]);
 					subList.add(viol[3]);
 					subList.add(viol[19]);
+					subList.add(viol[4]);
+					subList.add(viol[21]);
+
 				}
-				if (subList.size() == 6)
+				if (subList.size() == 8)
 					Parent_List.add(subList);
 				if (Parent_List.size() > 250000) {
 
@@ -136,12 +139,15 @@ public class ParkingCollectorImpl implements Collector<List, List> {
 		System.out.println("save " + parent_List.size());
 		for (List<String> temp : parent_List) {
 			BasicDBObject document = new BasicDBObject();
-			document.put("Registration state", temp.get(0));
+			document.put("Registration_state", temp.get(0));
 			document.put("Description", temp.get(1));
 			document.put("code", temp.get(2));
-			document.put("Plate Id", temp.get(3));
-			document.put("Plate Type", temp.get(4));
-			document.put("Violation Time", temp.get(5));
+			document.put("Plate_Id", temp.get(3));
+			document.put("Plate_Type", temp.get(4));
+			document.put("Violation_Time", temp.get(5));
+
+			document.put("Violation_County", temp.get(6));
+			document.put("Violation_Issue_date", temp.get(7));
 			collection.insert(document);
 		}
 
